@@ -13,22 +13,22 @@ public class DragAndDropItem : MonoBehaviour
 
     private void Start()
     {
-        if(this.GetComponent<BoxCollider>() != null) this.AddComponent<BoxCollider>();
+        if (this.GetComponent<BoxCollider>() != null) this.AddComponent<BoxCollider>();
         StartPoint = this.transform.position;
     }
 
     void Update()
-    {        
-        
+    {
+
         if (isDragging)
-        {        
+        {
             // Get the mouse position in world space
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f; // Ensure the object stays on the same Z-plane
 
             // Move the object towards the mouse position
             transform.position = Vector3.MoveTowards(transform.position, mousePosition, attractSpeed * Time.deltaTime);
-        }      
+        }
     }
 
     void OnMouseDown()
