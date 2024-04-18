@@ -12,9 +12,9 @@ public class DragAndDropItem : MonoBehaviour
 
     private void Start()
     {
-        if (GetComponent<BoxCollider>() == null) // Add a BoxCollider if not already present
+        if (GetComponent<BoxCollider2D>() == null) // Add a BoxCollider if not already present
         {
-            gameObject.AddComponent<BoxCollider>();
+            gameObject.AddComponent<BoxCollider2D>();
         }
         StartPoint = transform.position;
     }
