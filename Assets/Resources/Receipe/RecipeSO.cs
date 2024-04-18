@@ -11,8 +11,8 @@ public class RecipeSO : ScriptableObject
     public List<IngredientSO> ingredients = new List<IngredientSO>();
     [SerializeField] public bool isOrderSensitive = false;
     [SerializeField] public bool isAlcoholic {get; private set;}
-    
 
+    [SerializeField] public Sprite RecipeImage;   
 
     public void Awake()
     {

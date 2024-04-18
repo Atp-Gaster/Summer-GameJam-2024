@@ -310,6 +310,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &15677827
 Transform:
   m_ObjectHideFlags: 0
@@ -635,6 +637,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &80734040
 Transform:
   m_ObjectHideFlags: 0
@@ -888,6 +892,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &205313233
 Transform:
   m_ObjectHideFlags: 0
@@ -1278,6 +1284,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &285226163
 Transform:
   m_ObjectHideFlags: 0
@@ -1618,6 +1626,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &1242646518
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,6 +1920,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!61 &1452190131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,6 +2373,9 @@ MonoBehaviour:
   TotalIngrediant: 0
   MaxIngrediant: 0
   IsFull: 0
+  IngrediantPrefab: {fileID: 0}
+  ImagePrefab: {fileID: 0}
+  ContentOverlay: {fileID: 0}
 --- !u!4 &1624158521
 Transform:
   m_ObjectHideFlags: 0
@@ -2566,6 +2581,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &1707910401
 Transform:
   m_ObjectHideFlags: 0
@@ -2853,6 +2870,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!114 &1715046806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3159,6 +3178,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &1815142315
 Transform:
   m_ObjectHideFlags: 0
@@ -3499,6 +3520,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!114 &1980525758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3705,6 +3728,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!114 &1986524676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4099,6 +4124,8 @@ MonoBehaviour:
   attractSpeed: 99999
   isDragging: 0
   StartPoint: {x: 0, y: 0, z: 0}
+  handOpenCursor: {fileID: 0}
+  handCloseCursor: {fileID: 0}
 --- !u!4 &2134411140
 Transform:
   m_ObjectHideFlags: 0

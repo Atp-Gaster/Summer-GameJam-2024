@@ -61,7 +61,7 @@ public class QueueManager : MonoBehaviour
             if (randomCustomer != null)
             {
                 EnqueueCustomer(randomCustomer);
-                CocktailInfoSO randomItem = randomCustomer.GetRandomWishlist();
+                RecipeSO randomItem = randomCustomer.GetRandomWishlist();
             }
         }
     }
