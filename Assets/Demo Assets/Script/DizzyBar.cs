@@ -50,4 +50,14 @@ public class DizzyBar : MonoBehaviour
             CameraAnim.SetInteger("Stage", 4);
         }       
     }
+
+    public float getDizzyLevel()
+    {
+        return Dizzyslider.value;
+    }
+
+    public int getMaxDizzyLevel()
+    {
+        return MaxDizzyValue;
+    }
 }
