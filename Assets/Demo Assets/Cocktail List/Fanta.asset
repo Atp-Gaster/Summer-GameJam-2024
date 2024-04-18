@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fa927cdc11c91249957f945bd165d79, type: 3}
-  m_Name: DangSoda
+  m_Name: Fanta
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Dang Soda
-  <IsOnIce>k__BackingField: 1
+  <Name>k__BackingField: Fanta
+  <IsOnIce>k__BackingField: 0
   <IsHaveLime>k__BackingField: 0
-  <IsHaveBoba>k__BackingField: 1
+  <IsHaveBoba>k__BackingField: 0
   <Ingrediant>k__BackingField: []
   <NumberOfIngrediant>k__BackingField: 
-  <Sprite>k__BackingField: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}
+  <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 37329eb1cbec83642978b46ea4d6ed3d, type: 3}
