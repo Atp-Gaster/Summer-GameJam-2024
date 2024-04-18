@@ -11,6 +11,7 @@ public class IngredientSO : ScriptableObject
     }
     [Header("General")]
     [SerializeField] public string ingredientName;
+    public int ingredientID;
     [SerializeField] public IngredientType ingredientType;
     [SerializeField] public bool isAlcoholic;
 

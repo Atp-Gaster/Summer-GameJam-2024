@@ -6,7 +6,7 @@ public class CookingManager : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] public List<RecipeSO> activeRecipes;
-    [SerializeField] public DropPanel dropPanel;
+    [SerializeField] public CreateOrder CreateOrder;
     [SerializeField] public RecipeSO ambiguousRecipe;
     [SerializeField] public GameObject orderPrefab;
     
@@ -18,14 +18,14 @@ public class CookingManager : MonoBehaviour
         {
             // Debug.Log(activeRecipes[i].ingredients.Count);
             // Debug.Log(dropPanel.ingredients.Count);
-            if (activeRecipes[i].ingredients.Count == dropPanel.ingredients.Count)
+            if (activeRecipes[i].ingredients.Count == CreateOrder.ingredients.Count)
             {
                 bool isEqual = true;
-                for (int j = 0; j < dropPanel.ingredients.Count; j++)
+                for (int j = 0; j < CreateOrder.ingredients.Count; j++)
                 {
                     // Debug.Log(dropPanel.ingredients[j].ToString());
                     // Debug.Log(activeRecipes[i].ingredients[j].ToString());
-                    if (activeRecipes[i].ingredients[j] != dropPanel.ingredients[j])
+                    if (activeRecipes[i].ingredients[j] != CreateOrder.ingredients[j])
                     {
                         isEqual = false;
                         break;
@@ -33,12 +33,12 @@ public class CookingManager : MonoBehaviour
                 }
                 if (isEqual)
                 {
-                    dropPanel.clearIngredients();
+                    CreateOrder.clearIngredients();
                     return activeRecipes[i];
                 }
             }
         }
-        dropPanel.clearIngredients();
+        CreateOrder.clearIngredients();
         return ambiguousRecipe;
     }
 

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Ice
   m_EditorClassIdentifier: 
   ingredientName: Ice
+  ingredientID: 4
   ingredientType: 2
   isAlcoholic: 0
