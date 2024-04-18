@@ -1223,7 +1223,7 @@ MonoBehaviour:
   activeRecipes:
   - {fileID: 11400000, guid: 75405ada9d257ef46851ddd844fac95c, type: 2}
   - {fileID: 11400000, guid: 66369f126c4101544ac7f0b13ba499e2, type: 2}
-  CreateOrder: {fileID: 0}
+  CreateOrder: {fileID: 1624158520}
   ambiguousRecipe: {fileID: 11400000, guid: f431523c42e23a345be76b71a6e64d19, type: 2}
   orderPrefab: {fileID: 5092292183514328227, guid: 21ad973e0b5ddc748979c847ea9487bb, type: 3}
 --- !u!1 &702713441
@@ -3605,7 +3605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1624158521}
   - component: {fileID: 1624158520}
-  - component: {fileID: 1624158522}
   - component: {fileID: 1624158519}
   - component: {fileID: 1624158518}
   m_Layer: 0
@@ -3728,12 +3727,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: []
-  cupSize: 1
   IsIce: 0
   IsBoba: 0
   IsLime: 0
   TotalIngrediant: 0
-  MaxIngrediant: 0
+  MaxIngrediant: 5
   IsFull: 0
   ImagePrefab: {fileID: 0}
   ContentOverlay: {fileID: 980505745}
@@ -3752,19 +3750,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660349188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1624158522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624158517}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9915e463d0493749ae55b0647e39b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredients: []
 --- !u!1 &1660349187
 GameObject:
   m_ObjectHideFlags: 0

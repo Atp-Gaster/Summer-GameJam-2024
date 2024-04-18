@@ -6,22 +6,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum CupSize
-{
-    Small, Medium, Big
-}
+
 public class CreateOrder : MonoBehaviour
 {
     [Header("Order Parameter")]    
-    public List<IngredientSO> ingredients = new List<IngredientSO>();
-    public CupSize cupSize = CupSize.Medium;      
+    public List<IngredientSO> ingredients = new List<IngredientSO>();    
     public bool IsIce = false;
     public bool IsBoba = false;
     public bool IsLime = false;
 
     [Header("Order Property")]
     [SerializeField] int TotalIngrediant = 0;
-    [SerializeField] int MaxIngrediant = 0;
+    [SerializeField] int MaxIngrediant = 5;
     [SerializeField] bool IsFull = false;
 
     [Header("Sprite Copy Settings")]  
@@ -36,11 +32,17 @@ public class CreateOrder : MonoBehaviour
     public void clearIngredients()
     {
         ingredients.Clear();
+
+        foreach (Transform child in ContentOverlay.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(TotalIngrediant <= MaxIngrediant)
+        if(TotalIngrediant < MaxIngrediant)
         {
             if (collision.tag == "Tonic" || collision.tag == "Toping")
             {
@@ -54,18 +56,7 @@ public class CreateOrder : MonoBehaviour
 
     private void Update()
     {
-        switch (cupSize)
-        {
-            case CupSize.Small:
-                MaxIngrediant = 5;
-                break;
-            case CupSize.Medium:
-                MaxIngrediant = 10;
-                break;
-            case CupSize.Big:
-                MaxIngrediant = 15;
-                break;
-        }
+       
     }
 
 }
