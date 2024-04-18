@@ -13,14 +13,14 @@ public class order : MonoBehaviour
 
     SpriteRenderer orderSprite;
 
-    [SerializeField] public CocktailInfoSO cocktail;
+    [SerializeField] public RecipeSO cocktail;
 
     // set where the start point is
     private void Start()
     {
         _originalpos = transform.position;
         orderSprite = transform.GetComponent<SpriteRenderer>();
-        orderSprite.sprite = cocktail.Sprite;
+        orderSprite.sprite = cocktail.RecipeImage;
         if (this.GetComponent<BoxCollider2D>() == null) this.AddComponent<BoxCollider2D>();
     }
 

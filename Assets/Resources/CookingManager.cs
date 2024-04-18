@@ -8,6 +8,7 @@ public class CookingManager : MonoBehaviour
     [SerializeField] public List<RecipeSO> activeRecipes;
     [SerializeField] public DropPanel dropPanel;
     [SerializeField] public RecipeSO ambiguousRecipe;
+    [SerializeField] public GameObject orderPrefab;
     
     
     public RecipeSO mix()
@@ -39,6 +40,12 @@ public class CookingManager : MonoBehaviour
         }
         dropPanel.clearIngredients();
         return ambiguousRecipe;
+    }
+
+    public void generateMixCocktail()
+    {
+        GameObject cocktail = Instantiate(orderPrefab);
+        cocktail.GetComponent<order>().cocktail = mix();
     }
 
     public void stringMix()
