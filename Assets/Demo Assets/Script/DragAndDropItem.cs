@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
 
 public class DragAndDropItem : MonoBehaviour
 {
@@ -11,24 +7,29 @@ public class DragAndDropItem : MonoBehaviour
     private Vector3 attractPoint; // Point to which the object is attracted
     [SerializeField] Vector3 StartPoint;
 
+    public Texture2D handOpenCursor; // Texture for the cursor when not dragging
+    public Texture2D handCloseCursor; // Texture for the cursor when dragging
+
     private void Start()
     {
-        if(this.GetComponent<BoxCollider>() != null) this.AddComponent<BoxCollider>();
-        StartPoint = this.transform.position;
+        if (GetComponent<BoxCollider>() == null) // Add a BoxCollider if not already present
+        {
+            gameObject.AddComponent<BoxCollider>();
+        }
+        StartPoint = transform.position;
     }
 
     void Update()
-    {        
-        
+    {
         if (isDragging)
-        {        
+        {
             // Get the mouse position in world space
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f; // Ensure the object stays on the same Z-plane
 
             // Move the object towards the mouse position
             transform.position = Vector3.MoveTowards(transform.position, mousePosition, attractSpeed * Time.deltaTime);
-        }      
+        }
     }
 
     void OnMouseDown()
@@ -37,6 +38,7 @@ public class DragAndDropItem : MonoBehaviour
         {
             // When left mouse button is clicked, start dragging
             isDragging = true;
+            Cursor.SetCursor(handCloseCursor, Vector2.zero, CursorMode.Auto); // Change cursor to hand close
         }
     }
 
@@ -46,7 +48,8 @@ public class DragAndDropItem : MonoBehaviour
         {
             // When left mouse button is released, stop dragging
             isDragging = false;
-            this.transform.position = StartPoint;
+            transform.position = StartPoint;
+            Cursor.SetCursor(handOpenCursor, Vector2.zero, CursorMode.Auto); // Change cursor to hand open            
         }
     }
 
