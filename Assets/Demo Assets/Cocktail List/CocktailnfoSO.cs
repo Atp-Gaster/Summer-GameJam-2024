@@ -14,5 +14,6 @@ public class CocktailInfoSO : ScriptableObject
     [field: Header("Ingrediant Setting")]
     [field: SerializeField] public string[] Ingrediant { get; private set; }
     [field: SerializeField] public int[] NumberOfIngrediant { get; private set; }
+    [field: SerializeField] public Sprite Sprite { get; private set; }
 
 }
