@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Summer GameJam 2024
-  defaultCursor: {fileID: 2800000, guid: ad819d19b4aaf3741820cec8139f6fcd, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 76064573e1dfe5b4ea6900fa11b579d5, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
