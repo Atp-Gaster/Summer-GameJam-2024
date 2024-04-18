@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: BeautifulDaengSoda
   ingredients:
-  - {fileID: 11400000, guid: b9ef853443ad3514e984075372f2cc1e, type: 2}
-  - {fileID: 11400000, guid: 988603a34444dc64f8602834bfe4c5f1, type: 2}
-  - {fileID: 11400000, guid: 3f4b0edd0ba19df4ba211acb517e1fe7, type: 2}
+  - {fileID: 11400000, guid: 838be134b2da6a24ca17174775dddd9d, type: 2}
+  - {fileID: 11400000, guid: 838be134b2da6a24ca17174775dddd9d, type: 2}
+  - {fileID: 11400000, guid: 952a799c42097b34d946860aa9a84555, type: 2}
   isOrderSensitive: 1
+  RecipeImage: {fileID: 0}

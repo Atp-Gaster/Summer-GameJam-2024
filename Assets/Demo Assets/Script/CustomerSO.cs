@@ -10,16 +10,16 @@ public class CustomerSO : ScriptableObject
     public string customerName;
     public Sprite customerSprite;
     public float timerDuration; // Time before customer leaves
-    public CocktailInfoSO[] wishlistItems; // Array of wishlist items
+    public RecipeSO[] wishlistItems; // Array of wishlist items
     public int[] state;
     public int currentState;
 
     public string order;
     public Sprite orderSprite;
 
-    public CocktailInfoSO item;
+    public RecipeSO item;
 
-    public CocktailInfoSO GetRandomWishlist()
+    public RecipeSO GetRandomWishlist()
     {
         if (wishlistItems.Length == 0)
         {
@@ -27,9 +27,9 @@ public class CustomerSO : ScriptableObject
             return null;
         }
 
-        CocktailInfoSO randomItem = wishlistItems[Random.Range(0, wishlistItems.Length)];
-        order = randomItem.Name;
-        orderSprite = randomItem.Sprite;
+        RecipeSO randomItem = wishlistItems[Random.Range(0, wishlistItems.Length)];
+        order = randomItem.recipeName;
+        orderSprite = randomItem.RecipeImage;
         item = randomItem;
         // Debug.Log("Wishlist item name: " + randomItem.itemName);
         return randomItem;
