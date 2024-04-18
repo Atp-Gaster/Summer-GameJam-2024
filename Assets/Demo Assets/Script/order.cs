@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class order : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class order : MonoBehaviour
             transform.position = _originalpos;
         }
         transform.position = _originalpos;
+       
     }
 
     private void Update()

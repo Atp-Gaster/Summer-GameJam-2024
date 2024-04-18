@@ -12,6 +12,8 @@ public class CustomerSeat : MonoBehaviour
     public CustomerSO customer;
     public QueueManager manager;
 
+    [SerializeField] GameObject ForcePlayer;
+
     public void SetSeatStatus(bool isOccupied)
     {
         occupied = isOccupied;
@@ -102,7 +104,7 @@ public class CustomerSeat : MonoBehaviour
 
     private void OnMouseDown()
     {
-        manager.RemoveCustomerFromSeat(this);
+        //manager.RemoveCustomerFromSeat(this);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -118,6 +120,8 @@ public class CustomerSeat : MonoBehaviour
             else
             {
                 Debug.Log("incorrect cocktail");
+                ForcePlayer.SetActive(true);
+                Destroy(collision.gameObject);
             }
             // Debug.Log(cocktail.cocktail.Name);
         }

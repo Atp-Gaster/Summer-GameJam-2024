@@ -45,7 +45,7 @@ public class CookingManager : MonoBehaviour
     public void generateMixCocktail()
     {
         GameObject cocktail = Instantiate(orderPrefab);
-        cocktail.GetComponent<order>().cocktail = mix();
+        cocktail.GetComponent<order>().cocktail = mix();        
     }
 
     public void stringMix()
