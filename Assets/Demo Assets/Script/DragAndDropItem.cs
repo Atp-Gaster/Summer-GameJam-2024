@@ -49,7 +49,7 @@ public class DragAndDropItem : MonoBehaviour
             // When left mouse button is released, stop dragging
             isDragging = false;
             transform.position = StartPoint;
-            Cursor.SetCursor(handOpenCursor, Vector2.zero, CursorMode.Auto); // Change cursor to hand open
+            Cursor.SetCursor(handOpenCursor, Vector2.zero, CursorMode.Auto); // Change cursor to hand open            
         }
     }
 

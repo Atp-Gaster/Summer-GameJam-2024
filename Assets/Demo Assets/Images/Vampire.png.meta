@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed29cb5c46eb47b4ca6aae4e39207634
+guid: ff12d88ed1ce7a641835fa913b924c58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7171832301840621953
-    second: ActionBar_ExtraSlot_Background 1_0
+      213: -2904457877120967500
+    second: Vampire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ActionBar_ExtraSlot_Background 1_0
+      name: Vampire_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 384
+        y: 84
+        width: 293
+        height: 869
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 181e1e30b77778360800000000000000
-      internalID: 7171832301840621953
+      spriteID: 4bc9e1103fa41b7d0800000000000000
+      internalID: -2904457877120967500
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ActionBar_ExtraSlot_Background 1_0: 7171832301840621953
+      Vampire_0: -2904457877120967500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
