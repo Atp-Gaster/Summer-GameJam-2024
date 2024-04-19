@@ -144,10 +144,10 @@ public class CustomerSeat : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+   /* private void OnMouseDown()
     {
-        manager.RemoveCustomerFromSeat(this);
-    }
+        //manager.RemoveCustomerFromSeat(this);
+    }*/
 
     private IEnumerator StartTimer(float duration)
     {

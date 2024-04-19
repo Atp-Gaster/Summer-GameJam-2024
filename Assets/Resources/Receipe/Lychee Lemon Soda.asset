@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72840c231c35f8c418cafdc4c2d896d3, type: 3}
   m_Name: Lychee Lemon Soda
   m_EditorClassIdentifier: 
-  recipeName: LycheeLimeSoda
+  recipeName: Lychee Lemon Soda
   ingredients: []
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}
