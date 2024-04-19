@@ -16,7 +16,7 @@ public class CreateOrder : MonoBehaviour
     public bool IsLime = false;
 
     [Header("Order Property")]
-    [SerializeField] int TotalIngrediant = 0;
+    public int TotalIngrediant = 0;
     [SerializeField] int MaxIngrediant = 5;
     [SerializeField] bool IsFull = false;
 

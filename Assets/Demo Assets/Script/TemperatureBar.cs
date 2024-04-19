@@ -44,17 +44,17 @@ public class TemperatureBar : MonoBehaviour
         }
         if (currentTime >= 25)
         {
-            PlayerPicture.color = Color.yellow;
+            //PlayerPicture.color = Color.yellow;
             PlayerPicture.sprite = IconSprite[1];
         }
         if (currentTime >= 50)
         {
-            PlayerPicture.color = new Color(1.0f, 0.64f, 0.0f);
+            //PlayerPicture.color = new Color(1.0f, 0.64f, 0.0f);
             PlayerPicture.sprite = IconSprite[2];
         }
         if (currentTime >= 75)
         {
-            PlayerPicture.color = Color.red;
+           // PlayerPicture.color = Color.red;
             PlayerPicture.sprite = IconSprite[3];
         }
     }

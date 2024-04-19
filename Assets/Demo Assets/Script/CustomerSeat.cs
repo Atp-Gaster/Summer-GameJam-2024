@@ -71,7 +71,7 @@ public class CustomerSeat : MonoBehaviour
         }
 
         customer.currentState = state;
-        SpriteRenderer customerSprite = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        /*SpriteRenderer customerSprite = transform.GetChild(1).GetComponent<SpriteRenderer>();
         switch (state)
         {
             case 0: // Happy
@@ -85,7 +85,7 @@ public class CustomerSeat : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
     }
 
     public int GetScore()
