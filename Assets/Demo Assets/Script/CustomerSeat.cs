@@ -137,36 +137,13 @@ public class CustomerSeat : MonoBehaviour
             }
             else
             {
-                DizzyBar.CurrentDizzyValue = DizzyBar.CurrentDizzyValue + 10;
+                DizzyBar.CurrentDizzyValue += 10;
                 Debug.Log("incorrect cocktail");
                 Destroy(collision.gameObject);
             }
-
-            Coroutine coroutine;
-            if (seatCoroutineMap.TryGetValue(this, out coroutine))
-            {
-                StopCoroutine(coroutine); // Stop the coroutine using the reference
-                seatCoroutineMap.Remove(this); // Remove the coroutine reference from the map
-            }
-
-            // Reset UI and customer state here
-            uiText.text = "30";
-            uifill.fillAmount = 1;
-            uifill.color = Color.white;
-            ChangeCustomerState(customer, 3); // Set customer state to 3 (finished)
-            customer = null;
-            occupied = false;
-
-            SpriteRenderer orderSprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
-            SpriteRenderer customerSprite = transform.GetChild(1).GetComponent<SpriteRenderer>();
-            orderSprite.sprite = null;
-            customerSprite.sprite = null;
-            customerSprite.color = Color.white;
-
-            // Add a new customer to the seat
-            SetCustomer(manager.GetRandomCustomer());
         }
     }
+
     private void OnMouseDown()
     {
         manager.RemoveCustomerFromSeat(this);

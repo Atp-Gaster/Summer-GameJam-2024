@@ -1302,6 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: 7bc52a16774494846b728a7f4c761c46, type: 2}
 --- !u!1 &221654336
 GameObject:
@@ -1571,7 +1572,6 @@ GameObject:
   - component: {fileID: 397155522}
   - component: {fileID: 397155526}
   - component: {fileID: 397155525}
-  - component: {fileID: 397155524}
   m_Layer: 5
   m_Name: Player Wishlist
   m_TagString: Untagged
@@ -1598,52 +1598,6 @@ RectTransform:
   m_AnchoredPosition: {x: -198, y: -38}
   m_SizeDelta: {x: 233.5566, y: 237}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!61 &397155524
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397155521}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &397155525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,7 +1700,7 @@ MonoBehaviour:
   activeRecipes:
   - {fileID: 11400000, guid: 75405ada9d257ef46851ddd844fac95c, type: 2}
   - {fileID: 11400000, guid: 66369f126c4101544ac7f0b13ba499e2, type: 2}
-  dropPanel: {fileID: 1624158522}
+  CreateOrder: {fileID: 0}
   ambiguousRecipe: {fileID: 11400000, guid: f431523c42e23a345be76b71a6e64d19, type: 2}
   orderPrefab: {fileID: 0}
 --- !u!1 &517471337
@@ -3012,6 +2966,8 @@ MonoBehaviour:
   totalTime: 100
   currentTime: 0
   PlayerPicture: {fileID: 1121358447}
+  IconSprite: []
+  CameraAnim: {fileID: 0}
 --- !u!1 &847517296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,6 +4949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: 838be134b2da6a24ca17174775dddd9d, type: 2}
 --- !u!1 &1460163971
 GameObject:
@@ -5051,7 +5008,9 @@ MonoBehaviour:
   - {fileID: 540157245}
   - {fileID: 774395842}
   TotalScore: 0
+  CUSTOMER_PER_DAY: 10
   uiScore: {fileID: 1790180405}
+  uiDay: {fileID: 0}
 --- !u!1 &1481470230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5663,14 +5622,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800182b3f7dfd0140a18730f319ad8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cupSize: 1
+  ingredients: []
   IsIce: 0
   IsBoba: 0
   IsLime: 0
   TotalIngrediant: 0
   MaxIngrediant: 0
   IsFull: 0
-  IngrediantPrefab: {fileID: 0}
   ImagePrefab: {fileID: 0}
   ContentOverlay: {fileID: 980505745}
 --- !u!4 &1624158521
@@ -5947,6 +5905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: e679b65a983601b4a9df932689dd310e, type: 2}
 --- !u!1 &1758817478
 GameObject:
@@ -6566,6 +6525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: a0e8d12644d8a63449185a3ce9d2a22f, type: 2}
 --- !u!1 &1839373020
 GameObject:
@@ -6957,6 +6917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: 952a799c42097b34d946860aa9a84555, type: 2}
 --- !u!1 &1986524671
 GameObject:
@@ -7165,6 +7126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: b9ef853443ad3514e984075372f2cc1e, type: 2}
 --- !u!1 &2037054159
 GameObject:
@@ -7782,6 +7744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b925ae49fe79f449838967f1efd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: -99
   ingredient: {fileID: 11400000, guid: 714a0e616bbf23f4f9334f6c1b6fba5e, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
