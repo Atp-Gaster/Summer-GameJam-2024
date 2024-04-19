@@ -39,13 +39,13 @@ public class GameOverIndicator : MonoBehaviour
     void GameOver()
     {
         saveScore();
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameOver");
     }
 
     void GameComplete()
     {
         saveScore();
-        SceneManager.LoadScene("GameComplete", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameComplete");
     }
 
     void saveScore()
