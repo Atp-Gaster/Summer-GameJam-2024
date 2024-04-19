@@ -33,7 +33,14 @@ public class GameOverIndicator : MonoBehaviour
 
     void GameOver()
     {
-        PlayerPrefs.SetInt("high_score", queueManager.TotalScore);
-        SceneManager.LoadScene("TODO", LoadSceneMode.Additive);
+        int current_score = queueManager.TotalScore;
+        int current_highscore = PlayerPrefs.GetInt("high_score");
+        if (current_highscore == 0 || current_highscore < current_score)
+        {
+            PlayerPrefs.SetInt("high_score", current_score);
+        }
+        PlayerPrefs.SetInt("current_score", current_score);
+        
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
     }
 }
