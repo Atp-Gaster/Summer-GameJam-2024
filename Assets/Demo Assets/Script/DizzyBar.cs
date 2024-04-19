@@ -13,6 +13,12 @@ public class DizzyBar : MonoBehaviour
 
     // Start is called before the first frame update
 
+    public void SetDizzyValue(int value)
+    {
+        CurrentDizzyValue += value;
+        Dizzyslider.value += CurrentDizzyValue;
+    }
+
     private void Start()
     {
         Dizzyslider.maxValue = MaxDizzyValue;
@@ -42,7 +48,7 @@ public class DizzyBar : MonoBehaviour
         if (Dizzyslider.value >= 100)
         {
             CameraAnim.SetInteger("Stage", 4);
-        }
+        }       
     }
 
     public float getDizzyLevel()
