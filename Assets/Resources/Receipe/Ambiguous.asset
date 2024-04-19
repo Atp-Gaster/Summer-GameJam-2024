@@ -15,4 +15,4 @@ MonoBehaviour:
   recipeName: Ambiguous
   ingredients: []
   isOrderSensitive: 0
-  RecipeImage: {fileID: 7482667652216324306, guid: 37329eb1cbec83642978b46ea4d6ed3d, type: 3}
+  RecipeImage: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}

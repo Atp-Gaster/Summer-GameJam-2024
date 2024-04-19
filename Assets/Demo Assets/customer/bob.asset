@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: bob
   m_EditorClassIdentifier: 
   customerName: bob
-  customerSprite: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}
+  customerSprite: {fileID: 7482667652216324306, guid: 35de10730730db544b0d1db6201c2df4, type: 3}
   timerDuration: 30
   wishlistItems:
-  - {fileID: 11400000, guid: f5e9cbe1fa434e8408260ca94a76f6b9, type: 2}
-  - {fileID: 11400000, guid: 0e36a9710f7d2b04c8b83eb0973297c3, type: 2}
-  - {fileID: 11400000, guid: 12067569f2aa74046a2df8fdc799db02, type: 2}
-  - {fileID: 11400000, guid: 218cc2383f27e8248b48c09fbdf5e1df, type: 2}
+  - {fileID: 11400000, guid: f431523c42e23a345be76b71a6e64d19, type: 2}
+  - {fileID: 11400000, guid: 66369f126c4101544ac7f0b13ba499e2, type: 2}
+  - {fileID: 11400000, guid: 75405ada9d257ef46851ddd844fac95c, type: 2}
   state: 00000000010000000200000003000000
-  currentState: 0
-  order: fanta
+  currentState: 2
+  order: Ambiguous
   orderSprite: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}
+  item: {fileID: 11400000, guid: f431523c42e23a345be76b71a6e64d19, type: 2}
