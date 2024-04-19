@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Lychee Lemon Soda
   m_EditorClassIdentifier: 
   recipeName: Lychee Lemon Soda
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 8a97a80df718e0e45b7a135dae60c106, type: 2}
+  - {fileID: 11400000, guid: 0c25d37cda2160748a73ed7a5ace81fb, type: 2}
+  - {fileID: 11400000, guid: 64fda1357fee18a459f60858340c0e52, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

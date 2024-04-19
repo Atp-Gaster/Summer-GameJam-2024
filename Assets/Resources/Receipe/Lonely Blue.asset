@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Lonely Blue
   m_EditorClassIdentifier: 
   recipeName: Lonely Blue
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 1a5e404fb99b5aa49aee6da1514e3849, type: 2}
+  - {fileID: 11400000, guid: 714a0e616bbf23f4f9334f6c1b6fba5e, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

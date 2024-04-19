@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Root Beer Float
   m_EditorClassIdentifier: 
   recipeName: Root Beer Float
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 3d73418778582304891882b8917a372a, type: 2}
+  - {fileID: 11400000, guid: c6899272dfb46be4fa9f5edcdcf98328, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

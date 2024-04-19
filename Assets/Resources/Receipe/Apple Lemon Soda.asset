@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Apple Lemon Soda
   m_EditorClassIdentifier: 
   recipeName: Apple Lemon Soda
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: acce3b582e6144b46bbf05a6014fe838, type: 2}
+  - {fileID: 11400000, guid: 0c25d37cda2160748a73ed7a5ace81fb, type: 2}
+  - {fileID: 11400000, guid: 64fda1357fee18a459f60858340c0e52, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

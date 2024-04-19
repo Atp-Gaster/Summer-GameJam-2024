@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Fragrant Coconut Juice
   m_EditorClassIdentifier: 
   recipeName: Fragrant Coconut Juice
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 47ff56d67bd711c40848e6ad1e86b05b, type: 2}
+  - {fileID: 11400000, guid: 5a9373cc39d5841419a6189003671d78, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

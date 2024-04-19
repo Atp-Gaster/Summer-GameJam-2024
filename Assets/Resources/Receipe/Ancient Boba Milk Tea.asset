@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Ancient Boba Milk Tea
   m_EditorClassIdentifier: 
   recipeName: Ancient Boba Milk Tea
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: f88cb7c094ef8b540a997bc572b676e9, type: 2}
+  - {fileID: 11400000, guid: a0e8d12644d8a63449185a3ce9d2a22f, type: 2}
+  - {fileID: 11400000, guid: e679b65a983601b4a9df932689dd310e, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}
