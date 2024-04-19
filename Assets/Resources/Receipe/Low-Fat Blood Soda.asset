@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72840c231c35f8c418cafdc4c2d896d3, type: 3}
-  m_Name: DaengSoda
+  m_Name: Low-Fat Blood Soda
   m_EditorClassIdentifier: 
-  recipeName: DaengSoda
-  ingredients:
-  - {fileID: 11400000, guid: b9ef853443ad3514e984075372f2cc1e, type: 2}
-  - {fileID: 11400000, guid: 988603a34444dc64f8602834bfe4c5f1, type: 2}
-  - {fileID: 11400000, guid: 3f4b0edd0ba19df4ba211acb517e1fe7, type: 2}
+  recipeName: Ambiguous
+  ingredients: []
   isOrderSensitive: 0
-  RecipeImage: {fileID: 7482667652216324306, guid: 37329eb1cbec83642978b46ea4d6ed3d, type: 3}
+  RecipeImage: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}

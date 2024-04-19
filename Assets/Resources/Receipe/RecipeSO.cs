@@ -27,4 +27,13 @@ public class RecipeSO : ScriptableObject
             }
         }
     }
+
+    private void OnValidate()
+    {
+        //Debug.Log("OnValidate");
+        #if UNITY_EDITOR
+                recipeName = this.name;
+                UnityEditor.EditorUtility.SetDirty(this);
+        #endif
+    }
 }
