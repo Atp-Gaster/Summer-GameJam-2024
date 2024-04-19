@@ -14,10 +14,47 @@ public class QueueManager : MonoBehaviour
     public int maxSeats = 3;
     public CustomerSeat[] seats;
 
-    public int TotalScore;
-    [SerializeField] private TextMeshProUGUI uiScore;
+    public int TotalScore = 0;
+    
+    [SerializeField] public int CUSTOMER_PER_DAY = 10;
+    private int customerGoal;
 
-    private int customerGoal = 10;
+    private int dayCounter = 0;
+
+    public TextMeshProUGUI uiScore;
+    public TextMeshProUGUI uiDay;
+
+    
+
+    private void Start()
+    {
+        for (int i = 0; i < maxSeats; i++)
+        {
+            seats[i].SetSeatStatus(false);
+        }
+        startNewDay();
+    }
+
+    private void Update()
+    {
+        while (customerQueue.Count > 0 && seatedCustomers.Count < maxSeats)
+        {
+            CustomerSO customer = customerQueue.Dequeue();
+            AssignCustomerToSeat(customer);
+        }
+
+        // Check if the seated customers have reached the goal
+        if (customerQueue.Count == 0 && customerGoal > 0)
+        {
+            AddNewCustomerToQueue();
+        }
+
+        if (customerQueue.Count == 0 && customerGoal <= 0)
+        {
+            startNewDay();
+        }
+        
+    }
 
     public void EnqueueCustomer(CustomerSO customer)
     {
@@ -74,33 +111,6 @@ public class QueueManager : MonoBehaviour
             availableCustomers.RemoveAt(randomIndex);
 
             RecipeSO randomItem = randomCustomer.GetRandomWishlist();
-        }
-    }
-
-    private void Start()
-    {
-        // Assign Queue
-        AddRandomCustomersToQueue(4);
-        TotalScore = 0;
-
-        for (int i = 0; i < maxSeats; i++)
-        {
-            seats[i].SetSeatStatus(false);
-        }
-    }
-
-    private void Update()
-    {
-        while (customerQueue.Count > 0 && seatedCustomers.Count < maxSeats)
-        {
-            CustomerSO customer = customerQueue.Dequeue();
-            AssignCustomerToSeat(customer);
-        }
-
-        // Check if the seated customers have reached the goal
-        if (customerQueue.Count == 0 && customerGoal > 0)
-        {
-            AddNewCustomerToQueue();
         }
     }
 
@@ -167,5 +177,13 @@ public class QueueManager : MonoBehaviour
         }
         TotalScore += score;
         uiScore.text = TotalScore.ToString();
+    }
+
+    public void startNewDay()
+    {
+        dayCounter += 1;
+        uiDay.text = "Day: " + dayCounter;
+        customerGoal = CUSTOMER_PER_DAY;
+        AddRandomCustomersToQueue(customerGoal);
     }
 }
