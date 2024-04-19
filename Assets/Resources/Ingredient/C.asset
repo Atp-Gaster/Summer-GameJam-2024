@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: C
   m_EditorClassIdentifier: 
   ingredientName: C
+  ingredientID: 2
   ingredientType: 1
   isAlcoholic: 0

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Lime
   m_EditorClassIdentifier: 
   ingredientName: Lime
+  ingredientID: 5
   ingredientType: 0
   isAlcoholic: 0
