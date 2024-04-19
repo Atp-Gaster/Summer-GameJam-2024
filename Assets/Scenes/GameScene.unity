@@ -930,7 +930,7 @@ MonoBehaviour:
   seats:
   - {fileID: 884748532}
   TotalScore: 0
-  CUSTOMER_PER_DAY: 1
+  CUSTOMER_PER_DAY: 10
   uiScore: {fileID: 1790180405}
   uiDay: {fileID: 254979491}
 --- !u!212 &247656106
