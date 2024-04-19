@@ -145,7 +145,7 @@ public class QueueManager : MonoBehaviour
         }
 
         // If all customers are in seats, log that no new customers were added
-        Debug.Log("No new customers added to the queue.");
+        // Debug.Log("No new customers added to the queue.");
     }
 
 
@@ -182,7 +182,7 @@ public class QueueManager : MonoBehaviour
     public void startNewDay()
     {
         dayCounter += 1;
-        uiDay.text = "Day: " + dayCounter;
+        // uiDay.text = "Day: " + dayCounter;
         customerGoal = CUSTOMER_PER_DAY;
         AddRandomCustomersToQueue(customerGoal);
     }
