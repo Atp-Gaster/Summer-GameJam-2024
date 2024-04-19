@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72840c231c35f8c418cafdc4c2d896d3, type: 3}
   m_Name: Low-Fat Blood Soda
   m_EditorClassIdentifier: 
-  recipeName: Ambiguous
-  ingredients: []
+  recipeName: Low-Fat Blood Soda
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: e17fc5193e574a14c87790b865d8a9ae, type: 2}
+  - {fileID: 11400000, guid: 0c25d37cda2160748a73ed7a5ace81fb, type: 2}
+  - {fileID: 11400000, guid: 64fda1357fee18a459f60858340c0e52, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: -2413806693520163455, guid: 10d0b18430a4d284cb9b0687cd5a6ee9, type: 3}

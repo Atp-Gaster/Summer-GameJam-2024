@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72840c231c35f8c418cafdc4c2d896d3, type: 3}
   m_Name: Lonely Blue
   m_EditorClassIdentifier: 
-  recipeName: 
-  ingredients: []
+  recipeName: Lonely Blue
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 1a5e404fb99b5aa49aee6da1514e3849, type: 2}
+  - {fileID: 11400000, guid: 714a0e616bbf23f4f9334f6c1b6fba5e, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

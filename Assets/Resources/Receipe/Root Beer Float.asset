@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72840c231c35f8c418cafdc4c2d896d3, type: 3}
   m_Name: Root Beer Float
   m_EditorClassIdentifier: 
-  recipeName: RootBeerFloat
-  ingredients: []
+  recipeName: Root Beer Float
+  ingredients:
+  - {fileID: 11400000, guid: afba551c6d9523c4f8fb91920bc6998e, type: 2}
+  - {fileID: 11400000, guid: 3d73418778582304891882b8917a372a, type: 2}
+  - {fileID: 11400000, guid: c6899272dfb46be4fa9f5edcdcf98328, type: 2}
   isOrderSensitive: 0
   RecipeImage: {fileID: 0}

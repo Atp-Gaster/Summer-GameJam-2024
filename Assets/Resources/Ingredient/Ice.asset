@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7527809e3dea15344b5191270d8060c2, type: 3}
-  m_Name: Soft Drink
+  m_Name: Ice
   m_EditorClassIdentifier: 
-  ingredientName: Soft Drink
-  ingredientID: 19
+  ingredientName: Ice
+  ingredientID: 20
   ingredientType: 0
   isAlcoholic: 0
