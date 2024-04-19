@@ -8,17 +8,16 @@ using UnityEngine.UI;
 public class QueueManager : MonoBehaviour
 {
     public CustomerSO[] customerlists;
+    public List<CustomerSO> availableCustomers = new List<CustomerSO>();
     public Queue<CustomerSO> customerQueue = new Queue<CustomerSO>();
     public List<CustomerSO> seatedCustomers = new List<CustomerSO>();
-    public int maxSeats = 1;
+    public int maxSeats = 3;
     public CustomerSeat[] seats;
-
-    [SerializeField] private Image uifill;
-    [SerializeField] private TextMeshProUGUI uiText;
 
     public int TotalScore;
     [SerializeField] private TextMeshProUGUI uiScore;
-    private Dictionary<CustomerSeat, Coroutine> seatCoroutineMap = new Dictionary<CustomerSeat, Coroutine>();
+
+    private int customerGoal = 10;
 
     public void EnqueueCustomer(CustomerSO customer)
     {
@@ -45,31 +44,43 @@ public class QueueManager : MonoBehaviour
             return null;
         }
 
-        int randomIndex = Random.Range(0, customerlists.Length);
-        CustomerSO randomCustomer = customerlists[randomIndex];
+        // Create a copy of customerlists
+        CustomerSO[] remainingCustomers = new CustomerSO[customerlists.Length];
+        customerlists.CopyTo(remainingCustomers, 0);
 
-        customerlists = customerlists.Where((source, index) => index != randomIndex).ToArray();
+        int randomIndex = Random.Range(0, remainingCustomers.Length);
+        CustomerSO randomCustomer = remainingCustomers[randomIndex];
+
+        // Remove the selected customer from remainingCustomers
+        remainingCustomers = remainingCustomers.Where((source, index) => index != randomIndex).ToArray();
 
         return randomCustomer;
     }
 
     public void AddRandomCustomersToQueue(int count)
     {
+        availableCustomers.AddRange(customerlists);
         for (int i = 0; i < count; i++)
         {
-            CustomerSO randomCustomer = GetRandomCustomer();
-            if (randomCustomer != null)
+            if (availableCustomers.Count == 0)
             {
-                EnqueueCustomer(randomCustomer);
-                RecipeSO randomItem = randomCustomer.GetRandomWishlist();
+                Debug.Log("No more customers available.");
+                break;
             }
+
+            int randomIndex = Random.Range(0, availableCustomers.Count);
+            CustomerSO randomCustomer = availableCustomers[randomIndex];
+            EnqueueCustomer(randomCustomer);
+            availableCustomers.RemoveAt(randomIndex);
+
+            RecipeSO randomItem = randomCustomer.GetRandomWishlist();
         }
     }
 
     private void Start()
     {
         // Assign Queue
-        AddRandomCustomersToQueue(3);
+        AddRandomCustomersToQueue(4);
         TotalScore = 0;
 
         for (int i = 0; i < maxSeats; i++)
@@ -85,6 +96,12 @@ public class QueueManager : MonoBehaviour
             CustomerSO customer = customerQueue.Dequeue();
             AssignCustomerToSeat(customer);
         }
+
+        // Check if the seated customers have reached the goal
+        if (customerQueue.Count == 0 && customerGoal > 0)
+        {
+            AddNewCustomerToQueue();
+        }
     }
 
     private void AssignCustomerToSeat(CustomerSO customer)
@@ -97,12 +114,30 @@ public class QueueManager : MonoBehaviour
                 Debug.Log(customerQueue.Count + " customer(s) left in the queue");
                 seat.SetCustomer(customer);
                 seatedCustomers.Add(customer);
-                Coroutine coroutine = StartCoroutine(StartTimer(customer.timerDuration, seat));
-                seatCoroutineMap[seat] = coroutine;
                 return;
             }
         }
     }
+
+    public void AddNewCustomerToQueue()
+    {
+        foreach (CustomerSO customer in customerlists)
+        {
+            bool isCustomerSeated = seats.Any(seat => seat.IsOccupied() && seat.customer == customer);
+
+            if (!isCustomerSeated)
+            {
+                // Add the customer to the queue
+                EnqueueCustomer(customer);
+                Debug.Log("Added customer " + customer.customerName + " back to the queue.");
+                return;
+            }
+        }
+
+        // If all customers are in seats, log that no new customers were added
+        Debug.Log("No new customers added to the queue.");
+    }
+
 
     public void RemoveCustomerFromSeat(CustomerSeat seat)
     {
@@ -113,11 +148,7 @@ public class QueueManager : MonoBehaviour
             CalculateScore(score);
 
             seatedCustomers.Remove(seat.customer);
-            Coroutine coroutine;
-            if (seatCoroutineMap.TryGetValue(seat, out coroutine))
-            {
-                StopCoroutine(coroutine); // Stop the coroutine using the reference
-            }
+
             seat.RemoveCustomer();
 
             if (customerQueue.Count > 0)
@@ -129,49 +160,12 @@ public class QueueManager : MonoBehaviour
 
     private void CalculateScore(int score)
     {
+        if (score > 0)
+        {
+            customerGoal--;
+            Debug.Log(customerGoal);
+        }
         TotalScore += score;
         uiScore.text = TotalScore.ToString();
-    }
-
-    private IEnumerator StartTimer(float duration, CustomerSeat seat)
-    {
-        yield return new WaitForSeconds(3f);
-
-        Debug.Log("Timer started! " + duration);
-        float timer = 0f;
-
-        while (timer <= duration)
-        {
-            uiText.text = Mathf.CeilToInt(duration - timer).ToString();
-
-            uifill.fillAmount = 1 - (timer / duration);
-
-            int remainingTime = Mathf.CeilToInt(duration - timer);
-
-            if (remainingTime >= 16)
-            {
-                uifill.color = new Color32(0, 255, 11, 168);
-                seat.ChangeCustomerState(seat.customer, seat.customer.state[0]);
-            }
-            else if (remainingTime <= 15 && remainingTime >= 6)
-            {
-                uifill.color = Color.yellow;
-                seat.ChangeCustomerState(seat.customer, seat.customer.state[1]);
-            }
-            else if(remainingTime <= 5)
-            {
-                uifill.color = Color.red;
-                seat.ChangeCustomerState(seat.customer, seat.customer.state[2]);
-            }
-
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        // Timer has finished
-        uiText.text = "0";
-        Debug.Log("Timer finished!");
-        seat.ChangeCustomerState(seat.customer, seat.customer.state[3]);
-        RemoveCustomerFromSeat(seat);
     }
 }

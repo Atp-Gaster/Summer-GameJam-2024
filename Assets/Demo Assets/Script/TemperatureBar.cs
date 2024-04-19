@@ -7,7 +7,7 @@ public class TemperatureBar : MonoBehaviour
 {
     public Slider slider;
     public float totalTime = 60f; // Total time for the countdown in seconds
-    [SerializeField] float currentTime; // Current time in the countdown
+    [SerializeField] public float currentTime; // Current time in the countdown
     [SerializeField] Image PlayerPicture;
 
 
