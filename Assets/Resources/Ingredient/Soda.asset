@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Soda
   m_EditorClassIdentifier: 
   ingredientName: Soda
-  ingredientType: 1
+  ingredientID: 17
+  ingredientType: 0
   isAlcoholic: 0

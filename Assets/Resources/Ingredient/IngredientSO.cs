@@ -22,4 +22,12 @@ public class IngredientSO : ScriptableObject
         return $"Ingredient: {ingredientName}, Type: {ingredientType}, Alcoholic: {isAlcoholic}";
     }
 
+    private void OnValidate()
+    {
+        //Debug.Log("OnValidate");
+#if UNITY_EDITOR
+        ingredientName = this.name;
+        UnityEditor.EditorUtility.SetDirty(this);
+#endif
+    }
 }
