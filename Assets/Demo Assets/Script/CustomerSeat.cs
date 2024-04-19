@@ -126,7 +126,7 @@ public class CustomerSeat : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Cocktail")
+        if (collision.tag == "Cocktail" && customer != null)
         {
             order cocktail = collision.GetComponent<order>();
             if (cocktail != null && cocktail.cocktail == customer.item)
