@@ -29,10 +29,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf35eb1d26c1bea4292ff1e84f462a42, type: 2}
   - {fileID: 11400000, guid: babe2ae8af96acb45904d741f528e7f1, type: 2}
   - {fileID: 11400000, guid: 3801eb9c26d10214bb0140de2917c0df, type: 2}
-  - {fileID: 11400000, guid: feda0f5c9bdaddd4a9b9c5bc1af8a267, type: 2}
   - {fileID: 11400000, guid: fbc30c76a830aa4418467ffa6145defa, type: 2}
   state: 00000000010000000200000003000000
   currentState: 0
-  order: 
-  orderSprite: {fileID: 0}
-  item: {fileID: 0}
+  order: Test Tonic
+  orderSprite: {fileID: 1161187888, guid: 29c485e0f2e4bc64c9590fe8e4770506, type: 3}
+  item: {fileID: 11400000, guid: feda0f5c9bdaddd4a9b9c5bc1af8a267, type: 2}

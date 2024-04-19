@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0c25d37cda2160748a73ed7a5ace81fb, type: 2}
   - {fileID: 11400000, guid: 64fda1357fee18a459f60858340c0e52, type: 2}
   isOrderSensitive: 0
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: -7839032289941893791, guid: 02a0d8cbb19dd9d48a94db5ecf4af899, type: 3}
