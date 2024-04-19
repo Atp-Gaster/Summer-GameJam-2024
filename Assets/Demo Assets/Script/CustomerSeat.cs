@@ -133,11 +133,13 @@ public class CustomerSeat : MonoBehaviour
             {
                 manager.RemoveCustomerFromSeat(this);
                 Debug.Log("correct cocktail");
+                Destroy(collision.gameObject);
             }
             else
             {
                 DizzyBar.CurrentDizzyValue = DizzyBar.CurrentDizzyValue + 10;
                 Debug.Log("incorrect cocktail");
+                Destroy(collision.gameObject);
             }
 
             Coroutine coroutine;
@@ -225,7 +227,7 @@ public class CustomerSeat : MonoBehaviour
         else
         {
             uiText.text = "30"; // Reset timer to 30 if no customer is assigned
-            uifill.fillAmount = 1;
+            uifill.fillAmount = 2;
             uifill.color = Color.white; // Reset color to white
         }
     }
