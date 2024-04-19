@@ -1016,6 +1016,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f721b7059d5d704d8d05996f143dcc0, type: 2}
   - {fileID: 11400000, guid: 6c9eceab43f6ca1428f0a4b49ce460bc, type: 2}
   - {fileID: 11400000, guid: 6535044913d87bc49bf676f1a30c651c, type: 2}
+  - {fileID: 11400000, guid: 7fa3ec36d791deb46ba154c910b07df3, type: 2}
+  - {fileID: 11400000, guid: 8c8927ac5d4bb9748b504ce9e978af0c, type: 2}
+  - {fileID: 11400000, guid: 7dc94575250e9d34098244ccb43b1e13, type: 2}
   availableCustomers: []
   seatedCustomers: []
   maxSeats: 3
