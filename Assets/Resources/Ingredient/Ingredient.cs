@@ -10,5 +10,8 @@ public class Ingredient : MonoBehaviour
     private void Start()
     {
         ID = ingredient.ingredientID;
+#if UNITY_EDITOR
+        this.gameObject.name = ingredient.name;
+#endif
     }
 }
