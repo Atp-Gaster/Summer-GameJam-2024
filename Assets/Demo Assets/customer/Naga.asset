@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd5c216ac9910e408d720f40a37f7e6, type: 3}
+  m_Name: Naga
+  m_EditorClassIdentifier: 
+  customerName: Naga
+  customerSprite: {fileID: 874088360, guid: 735b66e6b87793d49908b4ca1a4ec562, type: 3}
+  timerDuration: 30
+  wishlistItems:
+  - {fileID: 11400000, guid: 956e0a4a74541644d926cdcdca4f1623, type: 2}
+  - {fileID: 11400000, guid: b0dcfcdfa8f47b94db11fce98d596cb1, type: 2}
+  - {fileID: 11400000, guid: 6a3cc89783221554b96570e164b585b6, type: 2}
+  - {fileID: 11400000, guid: b9f08405e16bd6e47a3c4d5aed2bcc16, type: 2}
+  - {fileID: 11400000, guid: fe7f73faac7e9ca4e8b4454dc37cdd86, type: 2}
+  - {fileID: 11400000, guid: 1c89fd7730ca5ef438bdc8b2338183fa, type: 2}
+  - {fileID: 11400000, guid: 182f44a40919ef546b11370b3151ff21, type: 2}
+  - {fileID: 11400000, guid: d76c8bdad7b6c514abfb36a1f45ea2c2, type: 2}
+  - {fileID: 11400000, guid: 0dfb1ca2c70147b45a238a8adbd4cc12, type: 2}
+  - {fileID: 11400000, guid: 0cd649a6fc04e0842ad09a32ef36a08e, type: 2}
+  - {fileID: 11400000, guid: bf35eb1d26c1bea4292ff1e84f462a42, type: 2}
+  - {fileID: 11400000, guid: babe2ae8af96acb45904d741f528e7f1, type: 2}
+  - {fileID: 11400000, guid: 3801eb9c26d10214bb0140de2917c0df, type: 2}
+  - {fileID: 11400000, guid: feda0f5c9bdaddd4a9b9c5bc1af8a267, type: 2}
+  - {fileID: 11400000, guid: fbc30c76a830aa4418467ffa6145defa, type: 2}
+  state: 00000000010000000200000003000000
+  currentState: 0
+  order: Test Tonic
+  orderSprite: {fileID: 1161187888, guid: 29c485e0f2e4bc64c9590fe8e4770506, type: 3}
+  item: {fileID: 11400000, guid: feda0f5c9bdaddd4a9b9c5bc1af8a267, type: 2}

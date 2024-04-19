@@ -186,4 +186,9 @@ public class QueueManager : MonoBehaviour
         customerGoal = CUSTOMER_PER_DAY;
         AddRandomCustomersToQueue(customerGoal);
     }
+
+    public int getDayCounter()
+    {
+        return dayCounter;
+    }
 }

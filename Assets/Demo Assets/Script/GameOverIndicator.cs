@@ -20,7 +20,7 @@ public class GameOverIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int dayCounter = queueManager.getDayCounter();
         if (dizzyBar.getDizzyLevel() >= dizzyBar.getMaxDizzyLevel())
         {
             timer += Time.deltaTime;
@@ -29,18 +29,34 @@ public class GameOverIndicator : MonoBehaviour
                 GameOver();
             }
         }
+
+        if (dayCounter >= 4)
+        {
+            GameComplete();
+        }
     }
 
     void GameOver()
     {
+        saveScore();
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+    }
+
+    void GameComplete()
+    {
+        saveScore();
+        SceneManager.LoadScene("GameComplete", LoadSceneMode.Additive);
+    }
+
+    void saveScore()
+    {
         int current_score = queueManager.TotalScore;
         int current_highscore = PlayerPrefs.GetInt("high_score");
+
         if (current_highscore == 0 || current_highscore < current_score)
         {
             PlayerPrefs.SetInt("high_score", current_score);
         }
         PlayerPrefs.SetInt("current_score", current_score);
-        
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
     }
 }
