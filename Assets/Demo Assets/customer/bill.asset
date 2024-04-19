@@ -16,9 +16,11 @@ MonoBehaviour:
   customerSprite: {fileID: -2904457877120967500, guid: ff12d88ed1ce7a641835fa913b924c58, type: 3}
   timerDuration: 30
   wishlistItems:
+  - {fileID: 11400000, guid: f431523c42e23a345be76b71a6e64d19, type: 2}
+  - {fileID: 11400000, guid: 66369f126c4101544ac7f0b13ba499e2, type: 2}
   - {fileID: 11400000, guid: 75405ada9d257ef46851ddd844fac95c, type: 2}
   state: 00000000010000000200000003000000
-  currentState: 0
+  currentState: 2
   order: BeautifulDaengSoda
   orderSprite: {fileID: 7482667652216324306, guid: 35de10730730db544b0d1db6201c2df4, type: 3}
   item: {fileID: 11400000, guid: 75405ada9d257ef46851ddd844fac95c, type: 2}

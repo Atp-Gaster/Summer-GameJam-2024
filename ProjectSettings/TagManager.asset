@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tonic
   - Toping
+  - Cocktail
+  - Seat
   layers:
   - Default
   - TransparentFX

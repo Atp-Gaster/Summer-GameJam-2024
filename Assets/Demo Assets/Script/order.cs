@@ -53,6 +53,12 @@ public class order : MonoBehaviour
                 collider.gameObject.GetComponent<CustomerSeat>().OnTriggerEnter2D(GetComponent<Collider2D>());
                 break;
             }
+            if (collider.gameObject.tag == "Player")
+            {
+                overlapping = true;
+                collider.gameObject.GetComponent<PlayerManager>().OnTriggerEnter2D(GetComponent<Collider2D>());
+                break;
+            }
         }
 
         if (!overlapping)
