@@ -37,6 +37,8 @@ public class QueueManager : MonoBehaviour
 
     private void Update()
     {
+        int Textday = dayCounter + 1;
+        uiDay.text = "Day: " + Textday.ToString(); 
         while (customerQueue.Count > 0 && seatedCustomers.Count < maxSeats)
         {
             CustomerSO customer = customerQueue.Dequeue();

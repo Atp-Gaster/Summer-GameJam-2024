@@ -52,7 +52,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -64,7 +64,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Book Reciept/bookmark (1)
+    path: bookmark (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -86,7 +86,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2412512786
+      path: 1592666519
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -151,7 +151,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -163,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Book Reciept/bookmark (1)
+    path: bookmark (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
