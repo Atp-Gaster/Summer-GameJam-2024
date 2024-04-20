@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOverIndicator : MonoBehaviour
 {
     [SerializeField] public DizzyBar dizzyBar;
+    public TemperatureBar HotBar;
     [SerializeField] public QueueManager queueManager;
     private float timer;
     
@@ -30,6 +31,8 @@ public class GameOverIndicator : MonoBehaviour
             }
         }
 
+        if(HotBar.currentTime >= HotBar.totalTime) GameOver();
+
         if (dayCounter >= 4)
         {
             GameComplete();
@@ -38,7 +41,7 @@ public class GameOverIndicator : MonoBehaviour
 
     void GameOver()
     {
-        saveScore();
+        saveScore();        
         SceneManager.LoadScene("GameOver");
     }
 

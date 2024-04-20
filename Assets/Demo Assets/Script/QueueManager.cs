@@ -19,7 +19,7 @@ public class QueueManager : MonoBehaviour
     [SerializeField] public int CUSTOMER_PER_DAY = 10;
     private int customerGoal;
 
-    private int dayCounter = 0;
+    [SerializeField] int dayCounter = 0;
 
     public TextMeshProUGUI uiScore;
     public TextMeshProUGUI uiDay;
